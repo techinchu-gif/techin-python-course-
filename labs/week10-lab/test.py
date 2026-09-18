@@ -1,46 +1,51 @@
-#1. รับค่า text จากผู้ใช้ 
-#2. รับค่าอักขระที่ต้องการค้นหาจากผู้ใช้
-#3. แสดงผลจ่านวณของอักขระในข้อความ 
-# ตัวอย่างหน้าจอ 
-# Insert your text: Issara Thong-in
-# Character to find: o 
-# 5 letters 'o' found in 'Issara Thong-in'
+#1.รับค่า test จากผู้ใช้
+#2.รับค่าอักขระที่ต้องการค้นหาจากผู้ใช้
+#3.แสดงผลจำนวนของอักขระในข้อความ test
 
-print("\n=== ITERATING THROUGH STRING ===")
-count = 0
-text = input("Insert your text : ")
-char = input("Character to find : ")
+# ตัวอย่างหน้าจอ
+# Insert your test : Pitchayathida Wannasimuang
+# Charactor to find : 0
+# 5 Letters '0' found in 'Pitchayathida Wannasrimuang'
 
-for letter in text:
-    if letter == char: 
+
+
+
+print("\n=== TRAVERSING STRINGS ===")
+count = 10
+text = input("Insert your text:")
+char = input("Character to find:")
+
+for letters in text:
+    if letters == char:
         count += 1
-print(f"{count} letter {char} found in '{text}'")
+print(f"{count} letters ' {char}' found in '{text}'")
+""""""
 
-
-# เขียนโปรแกรมตรวจสอบความแข็งแรง PASSWORD
-# นิยามของ strong password คือ ยาวมากกว่า 8 ตัว, มีอักขระ @ 1 ตัว,มีตัวเลข, มีตัวอักษร
+#เขียนโปรแกรมตรวจสอบความแข็งแรงของ PASSWORD
+# นิยามของ strong password คือ ยาวมากกว่า8 ตัว , อักขระ @ 1 ตัว , มีตัวเลข , มีตัวอักษร
 #
-#ตัวอย่างหน้าจอ
-#Insert your password: Boonchoo
-# Your password is strong!
+# ตัวอย่างหน้าจอ
+# Insert your password :Pitchayathida
+# Your password is not strong!
 #
-# Insert your passwor : Test@123
+# Insert your password : Test@123
 # Your password is strong
 
-password = input("Insert your password: ")
-lenght = len(password)
+password = "Pitchayathida"
+lenght  = len(password)
 words = password.split('@')
+left = words[0].isalnm()
+right = words[1].isalum()
 
-
-if len(words) > 1: 
-    left = words[0].isalnum()
-    right = words[1].isalnum()
+if len(words) > 1 :
+    left = words[0].isalnm()
+    right= words[1].isalnm()
 else:
     left = False;
-    right = False;
+    right =False;
+    
 
-
-if lenght >= 8 and len(word) == 2 and left and right:
-    print("Your password is strong!")
+if lenght >=8 and len(words)== 2 and left and right:
+   print ("your password is strong!")
 else:
-    print("Your password is not strong!")
+    print ("Your password is not strong!")
