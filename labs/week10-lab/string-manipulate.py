@@ -5,6 +5,8 @@
 # 1. STRING CREATION AND BASIC OPERATIONS
 # ===========================
 
+
+
 print("=== STRING CREATION ===")
 # Different ways to create strings
 name = "India"
